@@ -3,7 +3,7 @@ const registered = new WeakMap<object, Set<PropertyKey>>()
 export function registerPrototypeMethod(
     prototype: object,
     name: PropertyKey,
-    implementation: (...args: any[]) => any
+    implementation: (...args: unknown[]) => unknown
 ): void {
     let methods = registered.get(prototype)
 
@@ -16,14 +16,17 @@ export function registerPrototypeMethod(
         return
     }
 
-    if (!Object.hasOwn(prototype, name)) {
-        Object.defineProperty(prototype, name, {
-            value: implementation,
-            writable: true,
-            configurable: true,
-            enumerable: false,
-        })
+    if (name in prototype) {
+        methods.add(name)
+        return
     }
+
+    Object.defineProperty(prototype, name, {
+        value: implementation,
+        writable: true,
+        configurable: true,
+        enumerable: false,
+    })
 
     methods.add(name)
 }
