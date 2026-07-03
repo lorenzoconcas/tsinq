@@ -1,7 +1,7 @@
 {
   "name": "tsinq",
   "version": "1.0.0",
-  "description": "LINQ-like extensions for Array.prototype in TypeScript.",
+  "description": "Powerful LINQ-inspired extensions for Array.prototype with full TypeScript support.",
   "keywords": [
     "linq",
     "typescript",
@@ -33,12 +33,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<YOUR_USERNAME>/tsinq.git"
+    "url": "https://github.com/lorenzoconcas/tsinq.git"
   },
   "bugs": {
-    "url": "https://github.com/<YOUR_USERNAME>/tsinq/issues"
+    "url": "https://github.com/lorenzoconcas/tsinq/issues"
   },
-  "homepage": "https://github.com/<YOUR_USERNAME>/tsinq#readme",
+  "homepage": "https://github.com/lorenzoconcas/tsinq#readme",
   "dependencies": {},
   "devDependencies": {
     "typescript": "^5.5.3"
