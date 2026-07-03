@@ -1,0 +1,46 @@
+{
+  "name": "tsinq",
+  "version": "1.0.0",
+  "description": "LINQ-like extensions for Array.prototype in TypeScript.",
+  "keywords": [
+    "linq",
+    "typescript",
+    "array",
+    "collection",
+    "extensions"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<YOUR_USERNAME>/tsinq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<YOUR_USERNAME>/tsinq/issues"
+  },
+  "homepage": "https://github.com/<YOUR_USERNAME>/tsinq#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
